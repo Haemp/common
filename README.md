@@ -7,13 +7,13 @@ npm i Haemp/common -S
 ```
 
 ```javascript
-import {all} from 'common';
-all(element1, element2).addEventListener('click', console.log);
+import all from './node_modules/common/all.js';
+all(element1, element2).addEventListener('click', console.log); 
 ```
 
 # Stuff
 
-## All()
+## all()
 Syntactic sugar for calling a method or getting a property on a set of objects without looping. Uses an ES6 Proxy.
 
 ```javascript
