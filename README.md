@@ -22,16 +22,32 @@ all(element1, element2).addEventListener('click', console.log);
 ```
 
 
-## Tabbed View
+## ViewStack
 Custom element tabbed view. Does the job, nothing fancy - totally standard.
 
 ```javascript
-import TabbedView from './node_modules/common/tabbed-view.js';
+import ViewStack from './node_modules/common/view-stack.js';
 
 document.body.innerHTML = `
-  <c-tabbed-view default-tab="1">
-    <div tab-id="1" slot="tabs">First Tab</div>
-    <div tab-id="2" slot="tabs">Second Tab</div>
-  </c-tabbed-view>
+  <c-view-stack default-tab="1">
+    <div tab-id="1" tab-name="First" slot="tabs">First Tab</div>
+    <div tab-id="2" tab-name="First" slot="tabs">Second Tab</div>
+  </c-view-stack>
 `;
+```
+
+## EventEmitter
+Follows the EventTarget spec
+
+```javascript
+import EventEmitter from './node_modules/common/event-emitter.js';
+
+class Model extends EventEmitter{
+    onData(newData){
+        this.dispatchEvent(new CustomEvent('data', {detail: newData}))
+    }
+}
+
+const model = new Model();
+model.addEventListener('data', evt => console.log(evt), {once: true});
 ```
