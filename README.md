@@ -51,3 +51,25 @@ class Model extends EventEmitter{
 const model = new Model();
 model.addEventListener('data', evt => console.log(evt), {once: true});
 ```
+
+## Tree Filter
+```javascript
+import treeFilter from './node_modules/common/tree-filter.js';
+
+const tree = {
+  name: 'foo',
+  children: [
+    {name: 'bar'},
+    {name: 'baz'}
+  ]
+};
+
+const filteredTree = treeFilter({node: tree, search: 'baz', searchKey: 'name', childrenKey: 'children'});
+console.log(filteredTree);
+// {
+//   name: 'foo',
+//   children: [
+//     {name: 'baz'}
+//   ]
+// }
+```
