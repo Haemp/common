@@ -1,5 +1,5 @@
 
-export export function filterNode({node, search, childrenKey, searchKey}){
+export default function filterNode({node, search, childrenKey, searchKey}){
 
     const filteredNode = Object.assign({}, node);    
     function innerFilter(node){

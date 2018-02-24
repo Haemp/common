@@ -2,7 +2,7 @@
   "name": "common",
   "version": "1.0.0",
   "description": "A drawer with useful tools",
-  "main": "all.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
