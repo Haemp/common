@@ -2,7 +2,7 @@
  * @param {mixed} objects
  * @returns {Proxy}
  */
-export default function all(...objects) {
+ module.exports = function all(...objects) {
     return new Proxy({}, {
         get: function(target, property) {
             const isFunction = typeof objects[0][property] === 'function';
