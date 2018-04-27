@@ -73,3 +73,19 @@ console.log(filteredTree);
 //   ]
 // }
 ```
+
+## Lever - A simplified Promise construct for process control
+Basically a promise with the resolve function attached to the 
+promise object.
+```javascript
+import lever from './node_modules/common/lever';
+
+const waitTillThisIsDone = lever();
+
+waitTillThisIsDone.then(_ => {
+    // done
+})
+
+waitTillThisIsDone.fulfill()
+
+```
