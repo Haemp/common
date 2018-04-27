@@ -1,4 +1,4 @@
-export default class ViewStack extends HTMLElement{
+module.exports = class ViewStack extends HTMLElement{
 
     constructor(){
         super();
