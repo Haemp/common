@@ -25,7 +25,7 @@ module.exports = function findObject(object, key, value){
 
         // check if the value 
         const subObject = object[keys[i]];
-        if(typeof subObject === 'object'){
+        if(subObject !== null && typeof subObject === 'object'){
             foundObject = findObject(subObject, key, value);
             if(foundObject) break;
         }
