@@ -40,7 +40,7 @@ module.exports = class EventEmitter{
         eventHandler.call(options.scope || this, event);
 
         if(options.once){
-          this.removeEventListener(eventHandler)
+          this.removeEventListener(event.type, eventHandler)
         }
       }
     }

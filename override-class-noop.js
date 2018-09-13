@@ -1,3 +1,9 @@
+/**
+ * 
+ * @param {*} overrideClass 
+ * @param {*} noopCallback 
+ * @return any
+ */
 module.exports = function overwriteNoOp(overrideClass, noopCallback ){
 
     noopCallback = noopCallback || function(){};
