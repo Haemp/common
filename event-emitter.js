@@ -19,12 +19,12 @@ module.exports = class EventEmitter{
     const handlers = this._handlersByType.get(eventType)
 
     if(handlers){
-      handlers.remove(handler);
+      handlers.delete(handler);
     }
   }
 
   removeAll(eventType){
-    this._handlersByType.remove(eventType);
+    this._handlersByType.delete(eventType);
   }
 
   /**
