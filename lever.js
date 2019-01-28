@@ -21,9 +21,16 @@
  */
 module.exports = function getLever(){
     let fulfill;
-    const p = new Promise(fulfillPromise => {
-        fulfill = fulfillPromise
+    let res;
+    let rej
+    const p = new Promise((resolve, reject) => {
+        fulfill = resolve;
+        res = resolve;
+        rej = reject;        
     })
     p.fulfill = fulfill;
+    p.resolve = res;
+    p.reject = rej;
+    
     return p;
 }
