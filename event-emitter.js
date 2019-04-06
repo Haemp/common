@@ -13,6 +13,11 @@ module.exports = class EventEmitter{
     }
 
     handlers.set(eventHandler, options);
+
+    // return a function to remove the listener
+    return () => {
+        this.removeEventListener(eventType, eventHandler)
+    }
   }
 
   removeEventListener(eventType, handler){
