@@ -1,3 +1,6 @@
+/**
+ * @param {Array} tree
+ */
 module.exports = function treeWalk(tree, childrenKey, callback){
 
     function innerFilter(node, parentNode){
@@ -13,5 +16,5 @@ module.exports = function treeWalk(tree, childrenKey, callback){
         callback(node, parentNode)
     }
 
-    innerFilter(tree);
+    tree.forEach(node => innerFilter(node));
 }
