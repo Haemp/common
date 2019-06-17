@@ -46,6 +46,7 @@
  */
 module.exports = function filterNode({node, childrenKey, filterFunc}){
 
+    // Copy the root node
     const filteredNode = Object.assign({}, node);    
     function innerFilter(node){
         if(node[childrenKey]){

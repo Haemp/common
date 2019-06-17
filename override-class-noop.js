@@ -10,7 +10,7 @@ module.exports = function overwriteNoOp(overrideClass, noopCallback ){
     const classPrototype = overrideClass.prototype;
     
     // override every method on the class except for the constructor
-    const methodsToOverride =Object.getOwnPropertyNames(classPrototype).filter(name => !name.includes('constructor'))
+    const methodsToOverride = Object.getOwnPropertyNames(classPrototype).filter(name => !name.includes('constructor'))
     
     // create a new class with noop functions with the same signatures
     const newClass = class NewPrototype{};
