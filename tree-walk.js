@@ -1,4 +1,4 @@
-function treeWalk(tree, childrenKey, callback){
+module.exports = function treeWalk(tree, childrenKey, callback){
 
     function innerFilter(node, parentNode){
 
